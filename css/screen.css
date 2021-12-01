@@ -24,8 +24,9 @@
     --global-heading-color: var(--global-color-neutral-900);
     --global-page-backgroundColor: var(--global-color-alpha-500);
     --global-selection-backgroundColor: var(--global-color-alpha-500);
-
-    /* shadows */
+    --global-link-color: var(--global-color-alpha-600);
+    --global-link-hoverColor: var(--global-color-alpha-500);
+    --global-link-outlineColor: var(--global-color-alpha-600);
 
     /* borders */
     --global-borderRadius: 3px;
@@ -210,20 +211,20 @@ hr {
 
 a {
     transition: all var(--global-transitionDuration-alpha) var(--global-transitionEasing-out);
-    color: var(--global-color-alpha-600);
-    outline-color: var(--global-color-alpha-600);
+    color: var(--global-link-color);
+    outline-color: var(--global-link-outlineColor);
     outline-width: medium;
     outline-offset: 2px;
 }
 
 a:visited,
 a:active {
-    color: var(--global-color-alpha-600);
+    color: var(--global-link-color);
 }
 
 a:hover,
 a:focus {
-    color: var(--global-color-alpha-500);
+    color: var(--global-link-hoverColor);
 }
 
 label,
@@ -414,8 +415,9 @@ legend {
 .c-input {
     --input-transition: all var(--global-transitionDuration-alpha) var(--global-transitionEasing-out);
     -webkit-appearance: none;
-    -moz-appearance: none;
+    -moz-appearance: none;    
     appearance: none;
+    outline: none;
     width: 100%;
     border-radius: var(--input-borderRadius, var(--global-borderRadius));
     border: var(--input-borderWidth, var(--global-borderWidth)) solid var(--input-borderColor, var(--global-input-borderColor));
@@ -424,8 +426,7 @@ legend {
     font-family: inherit;
     font-size: 16px;
     line-height: calc(var(--global-baseline) * 3);
-    padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md);
-    outline: none;
+    padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md); 
     transition: var(--input-transition);
 }
 
