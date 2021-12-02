@@ -72,7 +72,7 @@
 */
 
 html {
-    font-size: 16px;
+    font-size: 100%;
     line-height: 1.5;
     font-family: 'IBM Plex Sans', sans-serif;
     color: var(--global-page-color);
@@ -143,23 +143,23 @@ h1 {
 }
 
 h2 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 1.5rem;
+    line-height: calc(var(--global-baseline) * 4);
     margin: 0 0 var(--global-whitespace-lg);
 }
 
 h3 {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 1.25rem;
+    line-height: calc(var(--global-baseline) * 3);
     margin: 0 0 var(--global-whitespace-lg);
 }
 
 h4,
 h5,
 h6 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 24px;
+    line-height: calc(var(--global-baseline) * 3);
     margin: 0 0 var(--global-whitespace-lg);
 }
 
@@ -181,32 +181,6 @@ ol {
 li ul,
 li ol {
     margin-bottom: 0;
-}
-
-blockquote {
-    font-style: normal;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 var(--global-whitespace-lg);
-}
-
-blockquote * {
-    font-size: inherit;
-    line-height: inherit;
-}
-
-figcaption {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    margin-top: 8px;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background: LightGrey;
-    margin: 0 0 var(--global-whitespace-lg);
 }
 
 a {
@@ -281,33 +255,7 @@ legend {
 
 .o-row {
     position: relative;
-    padding: 24px 24px 0;
-}
-
-/* size modifiers */
-
-.o-row--lg {
-    padding-top: 48px;
-    padding-bottom: 24px;
-}
-
-.o-row--xl {
-    padding-top: 72px;
-    padding-bottom: 48px;
-}
-
-@media (min-width: 768px) {
-    .o-row {
-        padding-left: 48px;
-        padding-right: 48px;
-    }
-}
-
-@media (min-width: 992px) {
-    .o-row--xl {
-        padding-top: 96px;
-        padding-bottom: 72px;
-    }
+    padding: var(--global-whitespace-base) var(--global-whitespace-base) 0;
 }
 
 /*
@@ -334,7 +282,7 @@ legend {
 }
 
 .o-section + .o-section {
-    padding-top: 8px;
+    padding-top: var(--global-whitespace-sm);
 }
 
 /*
@@ -424,7 +372,7 @@ legend {
     background-color: var(--input-backgroundColor, var(--global-input-backgroundColor));
     color: var(--input-color, var(--global-input-color));
     font-family: inherit;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: calc(var(--global-baseline) * 3);
     padding: calc(var(--global-baseline) * 1.5 - var(--global-borderWidth)) var(--global-whitespace-md); 
     transition: var(--input-transition);
@@ -560,16 +508,16 @@ legend {
 }
 
 .c-custom-option__fake-input--checkbox .c-custom-option__symbol {
-    width: 10px;
-    height: 10px;
+    width: .625rem;
+    height: .625rem;
     fill: var(--custom-option__symbol-fill);
 }
 
 .c-custom-option__fake-input--radio .c-custom-option__symbol {
     background-color: var(--custom-option__symbol-fill);
     border-radius: 100%;
-    width: 6px;
-    height: 6px;
+    width: .375rem;
+    height: .375rem;
 }
 
 /* hover state */
@@ -699,15 +647,6 @@ legend {
 
 .u-align-center {
     margin: 0 auto;
-}
-
-/*
-    Utilities: text
-    Utility classes to create smaller or bigger test
-*/
-
-.u-text-sm {
-    font-size: 14px;
 }
 
 /*------------------------------------*\
